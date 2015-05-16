@@ -145,6 +145,11 @@ return [
 		'Kotopoisk\Providers\EventServiceProvider',
 		'Kotopoisk\Providers\RouteServiceProvider',
 
+        /*
+         * IDE Helpers Provider
+         */
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider'
+
 	],
 
 	/*
