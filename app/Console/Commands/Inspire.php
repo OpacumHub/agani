@@ -1,4 +1,4 @@
-<?php namespace Kotopoisk\Console\Commands;
+<?php namespace Agani\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

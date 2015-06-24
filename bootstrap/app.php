@@ -28,17 +28,17 @@ $app = new Illuminate\Foundation\Application(
 
 $app->singleton(
 	'Illuminate\Contracts\Http\Kernel',
-	'Kotopoisk\Http\Kernel'
+	'Agani\Http\Kernel'
 );
 
 $app->singleton(
 	'Illuminate\Contracts\Console\Kernel',
-	'Kotopoisk\Console\Kernel'
+	'Agani\Console\Kernel'
 );
 
 $app->singleton(
 	'Illuminate\Contracts\Debug\ExceptionHandler',
-	'Kotopoisk\Exceptions\Handler'
+	'Agani\Exceptions\Handler'
 );
 
 /*

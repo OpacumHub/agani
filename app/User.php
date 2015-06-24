@@ -1,4 +1,4 @@
-<?php namespace Kotopoisk;
+<?php namespace Agani;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;

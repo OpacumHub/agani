@@ -1,4 +1,4 @@
-<?php namespace Kotopoisk\Console;
+<?php namespace Agani\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -11,7 +11,7 @@ class Kernel extends ConsoleKernel {
 	 * @var array
 	 */
 	protected $commands = [
-		'Kotopoisk\Console\Commands\Inspire',
+		'Agani\Console\Commands\Inspire',
 	];
 
 	/**

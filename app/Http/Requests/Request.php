@@ -1,4 +1,4 @@
-<?php namespace Kotopoisk\Http\Requests;
+<?php namespace Agani\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

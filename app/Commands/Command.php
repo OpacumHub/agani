@@ -1,4 +1,4 @@
-<?php namespace Kotopoisk\Commands;
+<?php namespace Agani\Commands;
 
 abstract class Command {
 

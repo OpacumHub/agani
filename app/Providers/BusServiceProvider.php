@@ -1,4 +1,4 @@
-<?php namespace Kotopoisk\Providers;
+<?php namespace Agani\Providers;
 
 use Illuminate\Bus\Dispatcher;
 use Illuminate\Support\ServiceProvider;
@@ -16,7 +16,7 @@ class BusServiceProvider extends ServiceProvider {
 		$dispatcher->mapUsing(function($command)
 		{
 			return Dispatcher::simpleMapping(
-				$command, 'Kotopoisk\Commands', 'Kotopoisk\Handlers\Commands'
+				$command, 'Agani\Commands', 'Agani\Handlers\Commands'
 			);
 		});
 	}

@@ -1,6 +1,6 @@
-<?php namespace Kotopoisk\Http\Controllers\Auth;
+<?php namespace Agani\Http\Controllers\Auth;
 
-use Kotopoisk\Http\Controllers\Controller;
+use Agani\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\PasswordBroker;
 use Illuminate\Foundation\Auth\ResetsPasswords;

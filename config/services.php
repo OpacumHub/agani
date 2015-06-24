@@ -30,7 +30,7 @@ return [
 	],
 
 	'stripe' => [
-		'model'  => 'Kotopoisk\User',
+		'model'  => 'Agani\User',
 		'key' => '',
 		'secret' => '',
 	],

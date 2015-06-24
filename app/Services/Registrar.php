@@ -1,6 +1,6 @@
-<?php namespace Kotopoisk\Services;
+<?php namespace Agani\Services;
 
-use Kotopoisk\User;
+use Agani\User;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 

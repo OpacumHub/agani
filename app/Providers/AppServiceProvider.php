@@ -1,4 +1,4 @@
-<?php namespace Kotopoisk\Providers;
+<?php namespace Agani\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider {
 	{
 		$this->app->bind(
 			'Illuminate\Contracts\Auth\Registrar',
-			'Kotopoisk\Services\Registrar'
+			'Agani\Services\Registrar'
 		);
 	}
 

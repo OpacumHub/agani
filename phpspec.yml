@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: Kotopoisk
-        psr4_prefix: Kotopoisk
+        namespace: Agani
+        psr4_prefix: Agani
         src_path: app

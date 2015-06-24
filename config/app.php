@@ -139,11 +139,11 @@ return [
 		/*
 		 * Application Service Providers...
 		 */
-		'Kotopoisk\Providers\AppServiceProvider',
-		'Kotopoisk\Providers\BusServiceProvider',
-		'Kotopoisk\Providers\ConfigServiceProvider',
-		'Kotopoisk\Providers\EventServiceProvider',
-		'Kotopoisk\Providers\RouteServiceProvider',
+		'Agani\Providers\AppServiceProvider',
+		'Agani\Providers\BusServiceProvider',
+		'Agani\Providers\ConfigServiceProvider',
+		'Agani\Providers\EventServiceProvider',
+		'Agani\Providers\RouteServiceProvider',
 
         /*
          * IDE Helpers Provider

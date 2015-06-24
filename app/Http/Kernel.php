@@ -1,4 +1,4 @@
-<?php namespace Kotopoisk\Http;
+<?php namespace Agani\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -15,7 +15,7 @@ class Kernel extends HttpKernel {
 		'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse',
 		'Illuminate\Session\Middleware\StartSession',
 		'Illuminate\View\Middleware\ShareErrorsFromSession',
-		'Kotopoisk\Http\Middleware\VerifyCsrfToken',
+		'Agani\Http\Middleware\VerifyCsrfToken',
 	];
 
 	/**
@@ -24,9 +24,9 @@ class Kernel extends HttpKernel {
 	 * @var array
 	 */
 	protected $routeMiddleware = [
-		'auth' => 'Kotopoisk\Http\Middleware\Authenticate',
+		'auth' => 'Agani\Http\Middleware\Authenticate',
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
-		'guest' => 'Kotopoisk\Http\Middleware\RedirectIfAuthenticated',
+		'guest' => 'Agani\Http\Middleware\RedirectIfAuthenticated',
 	];
 
 }

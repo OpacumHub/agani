@@ -1,6 +1,6 @@
 <?php
 
-Route::get('/', 'MakeUpController@feed');
+Route::get('/', 'MakeUpController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

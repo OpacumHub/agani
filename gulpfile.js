@@ -20,7 +20,7 @@ require('laravel-elixir-sass-compass'); //Add compass support
 elixir(function(mix) {
 
     /*
-    Define minify extend method for main CSS
+     Define minify extend method for main CSS
      */
     elixir.extend('minifyMainCSS', function() {
 
@@ -59,7 +59,7 @@ elixir(function(mix) {
     });
 
     /*
-    Define Compass and create CSS from SCSS source
+     Define Compass and create CSS from SCSS source
      */
     mix.compass([
             'Bootstrap/bootstrap.scss',
@@ -68,22 +68,28 @@ elixir(function(mix) {
         ],
         'resources/assets/css/src',
         {
-            config_file: 'resources/config.rb', //Need just for line_comments option
+            config_file: 'public/config.rb', //Need just for line_comments option
             style: "expanded", //expanded, compressed, nested
             sass: "resources/assets/scss",
             font: "public/fonts",
-            image: "public/img",
+            image: "resources/assets/img",
             javascript: "public/js",
+            generated_images_path: 'public/img',
+            relative: false,
             sourcemap: false
         }
     );
 
     /*
-    Merge all CSS source into styles.css
-    */
+     Merge all CSS source into styles.css
+     */
     mix.styles([
         'src/Bootstrap/bootstrap.css',
         'src/FontAwesome/font-awesome.css',
+        'src/BxSlider/jquery.bxslider.css',
+        'src/Animate/animate.css',
+        'src/OwlCarousel/owl.carousel.css',
+        'src/OwlCarousel/owl.transitions.css',
         'src/app.css'
     ], 'resources/assets/css/styles.css').minifyMainCSS();
 
@@ -91,12 +97,16 @@ elixir(function(mix) {
      Merge all JS source into script.js
      */
     mix.scripts([
-       'src/jQuery/jquery.js',
-       'src/Bootstrap/bootstrap.js',
+        'src/jQuery/jquery.js',
+        'src/Bootstrap/bootstrap.js',
+        'src/jQuery-Autocomplete/jquery.autocomplete.js',
+        'src/BxSlider/jquery.bxslider.js',
+        'src/device/device.js',
+        'src/OwlCarousel/owl.carousel.js'
     ], 'resources/assets/js/script.js').uglifyMainJS();
 
     /*
-    Copy fonts to the public dir
+     Copy fonts to the public dir
      */
     mix.copy(
         'resources/assets/fonts/FontAwesome/',
@@ -107,6 +117,5 @@ elixir(function(mix) {
         'resources/assets/fonts/Bootstrap/',
         'public/fonts/Bootstrap/'
     );
-
 
 });

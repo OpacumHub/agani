@@ -1,4 +1,4 @@
-<?php namespace Kotopoisk\Providers;
+<?php namespace Agani\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
