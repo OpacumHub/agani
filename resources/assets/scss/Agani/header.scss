@@ -1,0 +1,250 @@
+header {
+  background: $white;
+
+  .top {
+    background: $blue;
+
+    .region {
+
+      span {
+        display: block;
+        float: left;
+        color: $grey;
+        padding: 10px 10px 10px 0px;
+        &#region {
+          color: $white;
+          border-bottom: 1px dotted #EA4F4F;
+          cursor: pointer;
+          padding: 10px 5px 0px;
+        }
+      }
+    }
+
+    .user-bar {
+
+      nav {
+
+        ul {
+
+          li {
+            margin-left: 25px;
+            &:before {
+              position: absolute;
+              left: -17px;
+              top: 10px;
+              content: '|';
+              color: $white;
+            }
+            &:first-child {
+              margin-left: 0;
+              &:before {
+                content: '';
+              }
+            }
+            a {
+              color: $grey;
+              border-radius: 0;
+              padding: 10px 0 10px 15px;
+              margin-left: 8px;
+              position: relative;
+              @include transation(color, .2s , ease-out);
+              &:hover,
+              &:focus {
+                background: none;
+                color: $white;
+              }
+              &:before {
+                position: absolute;
+                content: '';
+                width: 25px;
+                height: 25px;
+                top: 5px;
+                left: -13px;
+              }
+              &.enter {
+                &:before {
+                  @include ui-sprite(key);
+                }
+              }
+              &.register {
+                &:before {
+                  @include ui-sprite(reg);
+                }
+              }
+              &.help {
+                &:before {
+                  @include ui-sprite(help);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .middle {
+    padding: 20px 0;
+    img {
+      margin: -7px 0;
+    }
+    .promo {
+      p {
+        position: relative;
+        line-height: 20px;
+        margin: 10px 0;
+        &:before {
+          position: absolute;
+          height: 70%;
+          left: -25px;
+          top: 6px;
+          content: '';
+          border-left: 1px solid #D3D3D3;
+        }
+      }
+    }
+    .reformal {
+      background: url('/img/bg/sky.jpg') center no-repeat;
+      background-size: cover;
+      color: $grey;
+      p {
+        padding: 12px 7px 12px 30px;
+        margin: 0;
+        line-height: 20px;
+        font-size: 15px;
+      }
+      a {
+        @include transation(background, 0.2s , ease-out);
+        color: $white;
+        padding: 10px 15px;
+        background: $green;
+        display: block;
+        margin: 12px 20px 12px 0px;
+        text-align: center;
+        &:hover {
+          text-decoration: none;
+          background: #89DB51;
+        }
+      }
+    }
+  }
+
+  .bottom {
+
+    nav {
+      &.navbar {
+        margin-bottom: 0;
+        min-height: 46px;
+      }
+      &.navbar-default {
+        background-color: $white;
+        border-bottom: none;
+        #navbar-body {
+          padding: 0;
+        }
+        ul {
+          &.nav {
+            &.socials {
+
+              li {
+                background-color: $white;
+                &.fb,
+                &.fb:hover {
+                  background-color: #758ab7;
+                }
+                &.gp:hover {
+                  background-color: #e78174;
+                }
+                &.vk:hover {
+                  background-color: #7c94b0;
+                }
+                &.ok:hover {
+                  background-color: #F2720C;
+                }
+                &.fb {
+                  &:before {
+                    @include socials-sprite(fb-active);
+                  }
+                  &:hover {
+                    &:before {
+                      @include socials-sprite(fb-active);
+                    }
+                  }
+                }
+                &.gp {
+                  &:before {
+                    @include socials-sprite(gp);
+                  }
+                  &:hover {
+                    &:before {
+                      @include socials-sprite(gp-active);
+                    }
+                  }
+                }
+                &.vk {
+                  &:before {
+                    @include socials-sprite(vk);
+                  }
+                  &:hover {
+                    &:before {
+                      @include socials-sprite(vk-active);
+                    }
+                  }
+                }
+                &.ok {
+                  &:before {
+                    @include socials-sprite(ok);
+                  }
+                  &:hover {
+                    &:before {
+                      @include socials-sprite(ok-active);
+                    }
+                  }
+                }
+                &:before {
+                  border: none;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  margin: auto;
+                }
+
+              }
+            }
+
+            li {
+              position: relative;
+              @include transation(background-color, 0.3s , ease-out);
+              &.active,
+              &.active a,
+              &.active a:hover,
+              &:hover {
+                background-color: $blue;
+                color: #fff;
+              }
+              &:before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                border-left: 1px solid #e7e7e7;
+              }
+              &:first-child {
+                &:before {
+                  border-left: none;
+                }
+              }
+              a {
+                font-size: 15px;
+                text-transform: uppercase;
+                padding: 12px 25px 9px;
+                line-height: 24px;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

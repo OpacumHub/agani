@@ -1,0 +1,76 @@
+$socials-sprite-dimensions: true;
+$socials-spacing: 10px;
+@import "sprites/ui/*.png";
+@include all-ui-sprites;
+@import "sprites/socials/*.png";
+@include all-socials-sprites;
+
+.dev {
+  outline: 1px solid red;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+body {
+  font-family: "Fira_Sans", sans-serif;
+}
+
+.form-control,
+.btn {
+  @include border-radius(0);
+}
+
+select {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 29px;
+    width: 26px;
+    margin: -10px 0 -5px -7px;
+    cursor: pointer;
+    @include ui-sprite(checkbox);
+  }
+  &:checked {
+    &:before {
+      @include ui-sprite(checkbox_check);
+    }
+  }
+}
+
+.checkbox-inline, .radio-inline {
+  line-height: 30px;
+}
+
+.btn-success {
+  background: #97ca75;
+}
+
+.btn-blue {
+  background: $blue;
+  @include transation(background, 0.2s, ease-out);
+  color: #fff;
+  &:hover {
+    background: #5fb1c7;
+    color: #fff;
+  }
+}
+
+.button {
+  @include transation(background, 0.2s , ease-out);
+  color: $white;
+  padding: 10px 15px;
+  background: #f89f61;
+  width: 200px;
+  text-align: center;
+  &:hover {
+    text-decoration: none;
+    background: #f8883a;
+    color: $white;
+  }
+}

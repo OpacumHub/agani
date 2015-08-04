@@ -1,10 +1,12 @@
-var gulp = require('gulp'); //Need for native Gulp commands
-var ext = require('gulp-ext-replace'); //Allow to register Gulp extend method
-var elixir = require('laravel-elixir'); //Laravel Elixir
-var uglify = require('gulp-uglify'); //Allow to minify JS
-var minifyCss = require('gulp-minify-css'); //Allow to minify CSS
-var sourcemaps = require('gulp-sourcemaps'); //Add source mapping
-require('laravel-elixir-sass-compass'); //Add compass support
+var gulp = require('gulp'), //Need for native Gulp commands
+    ext = require('gulp-ext-replace'), //Allow to register Gulp extend method
+    elixir = require('laravel-elixir'), //Laravel Elixir
+    uglify = require('gulp-uglify'), //Allow to minify JS
+    minifyCSS = require('gulp-minify-css'), //Allow to minify CSS
+    sourcemaps = require('gulp-sourcemaps'), //Add source mapping
+    concat = require('gulp-concat'),
+    sass = require('gulp-ruby-sass'),
+    compass = require('gulp-compass');
 
 /*
  |--------------------------------------------------------------------------
@@ -15,107 +17,77 @@ require('laravel-elixir-sass-compass'); //Add compass support
  | for your Laravel application. By default, we are compiling the Less
  | file for our application, as well as publishing vendor resources.
  |
+
  */
+
+var config = {
+    sassPath: './resources/assets',
+    bowerDir: './vendor/bower_components'
+};
 
 elixir(function(mix) {
 
+
     /*
-     Define minify extend method for main CSS
+     Create CSS from SCSS source via compass
      */
-    elixir.extend('minifyMainCSS', function() {
 
-        gulp.task('minifyMainCSS', function() {
-            return gulp.src('resources/assets/css/styles.css')
-                .pipe(sourcemaps.init())
-                .pipe(minifyCss({compatibility: 'ie8'}))
-                .pipe(ext('min.css'))
-                .pipe(sourcemaps.write())
-                .pipe(gulp.dest('public/css/'));
-        });
-
-        return this.queueTask('minifyMainCSS');
-
+    gulp.task('scss', function() {
+        return gulp.src([
+            config.sassPath + '/scss/app.scss'
+        ])
+            .pipe(compass({
+                css: 'resources/assets/css',
+                config_file: 'public/config.rb', //Need just for fix line_comments option issue
+                style: "nested",
+                sass: config.sassPath + '/scss/',
+                font: "public/fonts",
+                image: "resources/assets/img",
+                javascript: "public/js",
+                generated_images_path: 'public/img',
+                import_path: [config.bowerDir + '/bootstrap-sass-official/assets/stylesheets'],
+                relative: false,
+                sourcemap: false
+            }))
     });
 
     /*
-     Define minify extend method for main JS
+     Merge all CSS files
      */
 
-    elixir.extend('uglifyMainJS', function() {
-
-        gulp.task('uglifyMainJS', function() {
-
-            gulp.src('resources/assets/js/script.js')
-                .pipe(sourcemaps.init())
-                .pipe(uglify({preserveComments: ''}))
-                .pipe(ext('min.js'))
-                .pipe(sourcemaps.write())
-                .pipe(gulp.dest('public/js/'));
-
-        });
-
-        return this.queueTask('uglifyMainJS');
-
+    gulp.task('css', ['scss'], function() {
+        return gulp.src([
+            config.bowerDir + '/owl-carousel2/dist/assets/owl.carousel.css',
+            config.bowerDir + '/owl-carousel2/dist/assets/owl.theme.default.css',
+            config.bowerDir + '/animate.css/animate.css',
+            config.sassPath + '/css/app.css'
+        ])
+            .pipe(concat('styles.css'))
+            .pipe(sourcemaps.init())
+            .pipe(minifyCSS({compatibility: 'ie8'}))
+            .pipe(ext('min.css'))
+            .pipe(sourcemaps.write())
+            .pipe(gulp.dest('./public/css/'));
     });
 
     /*
-     Define Compass and create CSS from SCSS source
+     Merge all JS files
      */
-    mix.compass([
-            'Bootstrap/bootstrap.scss',
-            'FontAwesome/font-awesome.scss',
-            'app.scss'
-        ],
-        'resources/assets/css/src',
-        {
-            config_file: 'public/config.rb', //Need just for line_comments option
-            style: "expanded", //expanded, compressed, nested
-            sass: "resources/assets/scss",
-            font: "public/fonts",
-            image: "resources/assets/img",
-            javascript: "public/js",
-            generated_images_path: 'public/img',
-            relative: false,
-            sourcemap: false
-        }
-    );
 
-    /*
-     Merge all CSS source into styles.css
-     */
-    mix.styles([
-        'src/Bootstrap/bootstrap.css',
-        'src/FontAwesome/font-awesome.css',
-        'src/BxSlider/jquery.bxslider.css',
-        'src/Animate/animate.css',
-        'src/OwlCarousel/owl.carousel.css',
-        'src/OwlCarousel/owl.transitions.css',
-        'src/app.css'
-    ], 'resources/assets/css/styles.css').minifyMainCSS();
+    gulp.task('js', function() {
+        return gulp.src([
+            config.bowerDir + '/jquery/dist/jquery.js',
+            config.bowerDir + '/bootstrap-sass-official/assets/javascripts/bootstrap.js',
+            config.bowerDir + '/owl-carousel2/dist/owl.carousel.js'
+        ])
+            .pipe(concat('script.js'))
+            .pipe(sourcemaps.init())
+            .pipe(uglify())
+            .pipe(ext('min.js'))
+            .pipe(sourcemaps.write())
+            .pipe(gulp.dest('./public/js/'));
+    });
 
-    /*
-     Merge all JS source into script.js
-     */
-    mix.scripts([
-        'src/jQuery/jquery.js',
-        'src/Bootstrap/bootstrap.js',
-        'src/jQuery-Autocomplete/jquery.autocomplete.js',
-        'src/BxSlider/jquery.bxslider.js',
-        'src/device/device.js',
-        'src/OwlCarousel/owl.carousel.js'
-    ], 'resources/assets/js/script.js').uglifyMainJS();
-
-    /*
-     Copy fonts to the public dir
-     */
-    mix.copy(
-        'resources/assets/fonts/FontAwesome/',
-        'public/fonts/FontAwesome'
-    );
-
-    mix.copy(
-        'resources/assets/fonts/Bootstrap/',
-        'public/fonts/Bootstrap/'
-    );
+    gulp.task('default', [ 'scss', 'css', 'js']);
 
 });

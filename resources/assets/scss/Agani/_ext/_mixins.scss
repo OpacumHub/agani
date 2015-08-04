@@ -1,0 +1,19 @@
+@mixin font-face($font-family, $font-filename, $font-weight: normal, $font-style: normal, $font-stretch: normal) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url('/fonts/#{$font-family}/#{$font-filename}.eot');
+    src: url('/fonts/#{$font-family}/#{$font-filename}.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/#{$font-family}/#{$font-filename}.woff') format('woff'),
+    url('/fonts/#{$font-family}/#{$font-filename}.ttf') format('truetype'),
+    url('/fonts/#{$font-family}/#{$font-filename}.svg##{$font-filename}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-stretch: $font-stretch;
+  }
+}
+
+@mixin transation($property, $speed, $animation) {
+  @include transition-property($property);
+  @include transition-duration($speed);
+  @include transition-timing-function($animation);
+}
