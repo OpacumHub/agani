@@ -1,0 +1,272 @@
+@media (max-width: $screen-md-max) {
+  header .middle .reformal a {
+    padding: 12px 8px;
+    text-align: center;
+    color: #6B944F;
+    @include transation(color, 0.2s, ease-out);
+    /*text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);*/
+    &:hover {
+      color: #FF7E00;
+      text-decoration: none;
+    }
+  }
+  #main-slider .promo p {
+    font-size: 1.714em;
+    margin: 5px 0;
+  }
+  #main-slider .promo h2, #main-slider .promo p.big {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 1.714em;
+  }
+  .search ul li {
+    padding: 15px 5px;
+  }
+  main.base .categories .nav-wrapper {
+    float: right;
+    font-size: 90%;
+    width: 80%;
+    border-bottom: none;
+    .nav-tabs li a {
+      padding: 10px 10px;
+    }
+    .nav {
+      margin-top: -47px;
+      border-bottom: 2px solid #ffa955;
+    }
+  }
+  main.base .private-ads .tab-content table td a.info {
+    float: right;
+  }
+  main.base .private-ads .private-ads-banner {
+    padding: 35px 0;
+  }
+  main.base .pro-ads .main-pro-ads .item img {
+    margin-top: 13px;
+  }
+  main.base .pro-ads .additional-pro-ads h4 {
+    margin-top: 0;
+  }
+  main.base .pro-ads .additional-pro-ads .item {
+    margin: 35px 0;
+  }
+  main.base .register-bottom .row .title {
+    padding-left: 15px;
+    margin-left: 10px;
+    font-size: 90%;
+  }
+  .footer-category {
+    ul {
+      padding: 0;
+      display: table;
+      table-layout: auto;
+      float: none;
+      width: 100%;
+      margin: auto;
+      li {
+        display: table-cell;
+        float: none;
+        text-align: center;
+        list-style: none;
+      }
+    }
+  }
+  footer.base h4 {
+    font-size: 90%;
+  }
+  main.base .recommend-ads .owl-theme .owl-nav .owl-next {
+    right: -17px;
+  }
+  main.base .recommend-ads .owl-theme .owl-nav .owl-prev {
+    left: -9px;
+  }
+}
+
+@media (max-width: $screen-sm-max) {
+  header .bottom nav.navbar-default ul.nav li a {
+    font-size: 90%;
+    padding: 12px 12px 9px;
+  }
+  header .bottom nav.navbar-default ul.socials li a {
+    padding: 12px 19px 9px;
+  }
+  #main-slider .promo {
+    font-size: 80%;
+  }
+  #main-slider .promo h2, #main-slider .promo p.big {
+    margin-top: 9px;
+    margin-bottom: 11px;
+  }
+  .search {
+    font-size: 80%;
+  }
+  .search ul li.additional {
+    font-size: 120%;
+  }
+  .search ul li select {
+    padding: 6px 5px;
+  }
+
+  main.base .categories .nav-wrapper {
+    border-bottom: 2px solid $orange;
+    width: 100%;
+    margin-top: -38px;
+  }
+  .btn .caret, .btn-group>.btn:first-child {
+    margin-left: 5px ;
+  }
+  main.base .pro-ads {
+    h2 {
+      font-size: 130%;
+    }
+    .additional-pro-ads {
+      h2 {
+        margin-top: 20px;
+        font-size: 130%;
+        padding-bottom: 10px;
+      }
+    }
+  }
+  main.base .pro-ads .additional-pro-ads .item {
+    text-align: center;
+    margin: 25px 0;
+    img {
+      margin: auto;
+    }
+    h4 {
+      margin-top: 15px;
+    }
+  }
+
+  main.base .blogs .tab-content .item footer {
+    text-align: center;
+    .date {
+      float: none !important;
+    }
+    .socials {
+      float: none !important;
+    }
+  }
+
+  main.base .register-bottom .row .title {
+    border-left: none;
+    text-align: center;
+    font-size: 100%;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  header .top .region span#region {
+    margin-bottom: 10px;
+  }
+  .main-nav-button {
+    float: left;
+  }
+  header .bottom nav.navbar-default ul.nav.socials {
+    margin: 0;
+  }
+  header .bottom nav.navbar-default ul.nav.socials li {
+    float: left;
+  }
+  header .bottom nav.navbar-default ul.socials li a {
+    padding: 12px 19px 14px;
+  }
+  #main-slider .promo h2, #main-slider .promo h2 {
+    font-size: 130%;
+  }
+  #main-slider .promo h2, #main-slider .promo p {
+    font-size: 130%;
+  }
+  main.base .categories .nav-wrapper {
+    width: 70%;
+  }
+  main.base .categories .nav-wrapper {
+    border-bottom: 2px solid $orange;
+    width: 100%;
+    margin-top: -30px;
+  }
+  main.base .categories h2{
+    font-size: 130%;
+  }
+  .btn .caret, .btn-group>.btn:first-child {
+    margin-left: 5px ;
+  }
+  .owl-theme .owl-nav {
+    display: none !important;
+  }
+  main.base .recommend-ads h2 {
+    font-size: 130%;
+  }
+  main.base .recommend-ads h2:before {
+    display: none;
+  }
+  main.base .private-ads h2 {
+    font-size: 130%;
+  }
+  main.base .private-ads .dropdown {
+    margin-top: -35px;
+  }
+  main.base .private-ads .tab-content table {
+    border: none;
+  }
+  main.base .private-ads .tab-content table td {
+    padding: 10px 15px;
+  }
+  main.base .pro-ads .additional-pro-ads .item h4 {
+    margin-top: 55px;
+  }
+  main.base .pro-ads .additional-pro-ads .item {
+    font-size: 120%;
+  }
+  main.base .tenders .row.tenders-nav {
+    h2 {
+      font-size: 130%;
+    }
+  }
+  main.base .tenders .nav-wrapper a {
+    padding: 6px;
+  }
+  main.base .tenders .nav-wrapper .nav {
+    margin-top: -28px;
+  }
+  main.base .blogs .tab-content .item img {
+    width: 100%;
+    max-height: 250px;
+  }
+  main.base .blogs .tab-content .item .author img {
+    width: 150px;
+    height: 150px;
+  }
+  main.base .blogs .tab-content .item .author {
+    margin-top: -78px;
+  }
+  main.base .blogs .tab-content .item .author .name {
+    margin-top: 96px;
+    font-size: 130%;
+  }
+  footer.base .bottom .row .bottom-nav, footer.base .bottom .row .copyright {
+    text-align: center;
+  }
+  .additional-search select,
+  .additional-search input {
+    margin: 15px 0;
+  }
+
+  .additional-search .additional-search-wrapper .additional-search-price {
+    padding: 0;
+    &:after {
+      display: none;
+    }
+  }
+
+  .additional-search .additional-search-wrapper .additional-search-price-bottom {
+    padding: 0;
+  }
+  .additional-search .additional-search-wrapper .row {
+    margin: 0;
+  }
+  .additional-search .additional-search-wrapper .additional-search-selector {
+    padding-bottom: 20px;
+  }
+}
+

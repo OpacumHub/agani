@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Agani">
     <meta name="keywords" content="Demo keywords, agani">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
@@ -44,9 +43,9 @@
 
                 <p>о покупке и продаже <br/> сельскохозяйственных животных и <br/> продуктов</p>
 
-                <p class="big">Разместить объявление</p>
-                <a class="button" href="#">Купить</a>
-                <a class="button" href="#">Продать</a>
+                <p class="big hidden-xs">Разместить объявление</p>
+                <a class="button hidden-xs" href="#">Купить</a>
+                <a class="button hidden-xs" href="#">Продать</a>
             </div>
 
         </div>
@@ -77,9 +76,9 @@
                     Amet, aperiam consectetur dignissimos eius eligendi eos eum ex expedita explicabo <br/>
                     facilis fuga fugiat, iure iusto laboriosam molestias non pariatur qui tempora!</p>
 
-                <p class="big">Разместить объявление</p>
-                <a class="button" href="#">Продать</a>
-                <a class="button" href="#">Купить</a>
+                <p class="big hidden-xs">Разместить объявление</p>
+                <a class="button hidden-xs" href="#">Продать</a>
+                <a class="button hidden-xs" href="#">Купить</a>
             </div>
         </div>
     </div>
@@ -87,11 +86,11 @@
 <!--/Main Slider-->
 
 <!--Search-->
-<section class="search">
+<section class="search hidden-xs">
     <div class="container">
         <div class="row">
             <ul>
-                <li>Я хочу</li>
+                <li class="hidden-sm">Я хочу</li>
                 <li>
                     <select id="businessFunction" class="form-control">
                         <option value="buy">Купить</option>
@@ -128,7 +127,7 @@
                     </button>
                 </li>
                 <li class="additional">
-                    <span>Расширенынй <br/> поиск</span>
+                    <span>Расширенный <br/> поиск</span>
                 </li>
             </ul>
             <div class="clearfix"></div>
@@ -142,9 +141,9 @@
 <div class="additional-search">
     <div class="container">
         <div class="row">
-            <div class="additional-search-wrapper col-lg-10 col-lg-offset-1">
+            <div class="additional-search-wrapper col-lg-10 col-lg-offset-1 col-md-10 col-sm-12">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
                         <select id="location" class="form-control">
                             <option value="" disabled selected>Производительность</option>
                             <option value="TSAO">ЦАО</option>
@@ -152,7 +151,7 @@
                             <option value="TSAO">НИХАО</option>
                         </select>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
                         <select id="location" class="form-control">
                             <option value="" disabled selected>Порода</option>
                             <option value="TSAO">ЦАО</option>
@@ -160,7 +159,7 @@
                             <option value="TSAO">НИХАО</option>
                         </select>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
                         <select id="location" class="form-control">
                             <option value="" disabled selected>Пол и возраст</option>
                             <option value="TSAO">ЦАО</option>
@@ -170,15 +169,15 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="additional-search-price col-lg-6">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="additional-search-price col-lg-6 col-md-6 col-sm-6">
                             <input id="minPrice" class="form-control" type="text" placeholder="цена от"/>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="additional-search-price-bottom col-lg-6 col-md-6 col-sm-6">
                             <input id="maxPrice" class="form-control" type="text" placeholder="цена до"/>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
                         <select id="location" class="form-control">
                             <option value="" disabled selected>за период</option>
                             <option value="TSAO">ЦАО</option>
@@ -186,7 +185,7 @@
                             <option value="TSAO">НИХАО</option>
                         </select>
                     </div>
-                    <div class="additional-search-selector col-lg-4">
+                    <div class="additional-search-selector col-lg-4 col-md-4 col-sm-4">
                         <ul>
                             <li>
                                 <label class="checkbox-inline">
@@ -213,156 +212,199 @@
     <section class="categories">
         <div class="container">
             <div class="row">
-                <h2>Категории</h2>
+                <div class="col-xs-12">
+                    <h2>Категории</h2>
 
-                <!--Nav tabs-->
-                <div class="nav-wrapper">
-                    <ul class="nav nav-tabs pull-right">
-                        <li class="active">
-                            <a href="#popular" data-toggle="tab">Популярные</a>
-                        </li>
-                        <li>
-                            <a href="#bird" data-toggle="tab">Птица</a>
-                        </li>
-                        <li>
-                            <a href="#items" data-toggle="tab">Продукты</a>
-                        </li>
-                        <li>
-                            <a href="#fish" data-toggle="tab">Рыба</a>
-                        </li>
-                        <li>
-                            <a href="#settings" data-toggle="tab">Пушные звери</a>
-                        </li>
-                        <li>
-                            <a href="#settings" data-toggle="tab">Прочие животные</a>
-                        </li>
-                        <li>
-                            <a href="#settings" data-toggle="tab">Товары и услуги</a>
-                        </li>
-                        <li>
-                            <a href="#settings" data-toggle="tab">Все</a>
-                        </li>
-                    </ul>
+                    <!--Nav tabs-->
+                    <div class="nav-wrapper">
+                        <ul class="nav nav-tabs pull-right hidden-sm hidden-xs">
+                            <li class="active">
+                                <a href="#popular" data-toggle="tab">Популярные</a>
+                            </li>
+                            <li>
+                                <a href="#bird" data-toggle="tab">Птица</a>
+                            </li>
+                            <li>
+                                <a href="#items" data-toggle="tab">Продукты</a>
+                            </li>
+                            <li>
+                                <a href="#fish" data-toggle="tab">Рыба</a>
+                            </li>
+                            <li>
+                                <a href="#settings" data-toggle="tab">Пушные звери</a>
+                            </li>
+                            <li>
+                                <a href="#settings" data-toggle="tab">Прочие животные</a>
+                            </li>
+                            <li>
+                                <a href="#settings" data-toggle="tab">Товары и услуги</a>
+                            </li>
+                            <li>
+                                <a href="#settings" data-toggle="tab">Все</a>
+                            </li>
+                        </ul>
+
+                        <!--noindex-->
+                        <div class="dropdown visible-sm visible-xs pull-right">
+                            <button class="btn dropdown-toggle" type="button" id="categoryMobile" data-toggle="dropdown">
+                                Популярные
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="categoryMobile">
+                                <li class="active">
+                                    <a href="#popular" data-toggle="tab">Популярные</a>
+                                </li>
+                                <li>
+                                    <a href="#bird" data-toggle="tab">Птица</a>
+                                </li>
+                                <li>
+                                    <a href="#items" data-toggle="tab">Продукты</a>
+                                </li>
+                                <li>
+                                    <a href="#fish" data-toggle="tab">Рыба</a>
+                                </li>
+                                <li>
+                                    <a href="#settings" data-toggle="tab">Пушные звери</a>
+                                </li>
+                                <li>
+                                    <a href="#settings" data-toggle="tab">Прочие животные</a>
+                                </li>
+                                <li>
+                                    <a href="#settings" data-toggle="tab">Товары и услуги</a>
+                                </li>
+                                <li>
+                                    <a href="#settings" data-toggle="tab">Все</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/noindex-->
+
+                    </div>
+
+
+
+
+
+                    <div class="clearfix"></div>
+
+                    <?
+                    $animals = [
+                            [
+                                    'name' => 'Овцы',
+                                    'img' => '/img/tmp/sheep.jpg'
+                            ],
+                            [
+                                    'name' => 'Свиньи',
+                                    'img' => '/img/tmp/pig.jpg'
+                            ],
+                            [
+                                    'name' => 'Коровы',
+                                    'img' => '/img/tmp/cow.jpg'
+                            ],
+                            [
+                                    'name' => 'Козы',
+                                    'img' => '/img/tmp/goat.jpg'
+                            ],
+                            [
+                                    'name' => 'Лошади',
+                                    'img' => '/img/tmp/horse.jpg'
+                            ],
+                            [
+                                    'name' => 'Кролики',
+                                    'img' => '/img/tmp/rabbit.jpg'
+                            ],
+                            [
+                                    'name' => 'Пчелы',
+                                    'img' => '/img/tmp/bee.jpg'
+                            ]
+                    ]
+                    ?>
+
+                            <!--Tab panes-->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="popular">
+
+                            @foreach ($animals as $animal)
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <a class="title" href="#">{{ $animal['name'] }}</a>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="#">Покупка (10)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Продажа (10)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <a href="#">
+                                                <img class="img-responsive" src="{{ $animal['img'] }}" alt="demo"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+
+                        </div>
+
+                        <div class="tab-pane" id="bird">
+
+                            @foreach ($animals as $animal)
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <a class="title" href="#">{{ $animal['name'] }}</a>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="#">Покупка (2)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Продажа (2)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <a href="#">
+                                                <img class="img-responsive" src="{{ $animal['img'] }}" alt="demo"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+
+                        </div>
+
+                        <div class="tab-pane" id="fish">
+
+                            @foreach ($animals as $animal)
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <a class="title" href="#">{{ $animal['name'] }}</a>
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="#">Покупка (12)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Продажа (32)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <a href="#">
+                                                <img class="img-responsive" src="{{ $animal['img'] }}" alt="demo"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+
+                        </div>
+                    </div>
                 </div>
 
-                <div class="clearfix"></div>
-
-                <?
-                $animals = [
-                        [
-                                'name' => 'Овцы',
-                                'img' => '/img/tmp/sheep.jpg'
-                        ],
-                        [
-                                'name' => 'Свиньи',
-                                'img' => '/img/tmp/pig.jpg'
-                        ],
-                        [
-                                'name' => 'Коровы',
-                                'img' => '/img/tmp/cow.jpg'
-                        ],
-                        [
-                                'name' => 'Козы',
-                                'img' => '/img/tmp/goat.jpg'
-                        ],
-                        [
-                                'name' => 'Лошади',
-                                'img' => '/img/tmp/horse.jpg'
-                        ],
-                        [
-                                'name' => 'Кролики',
-                                'img' => '/img/tmp/rabbit.jpg'
-                        ],
-                        [
-                                'name' => 'Пчелы',
-                                'img' => '/img/tmp/bee.jpg'
-                        ]
-                ]
-                ?>
-
-                <!--Tab panes-->
-                <div class="tab-content">
-                    <div class="tab-pane active" id="popular">
-
-                        @foreach ($animals as $animal)
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <a class="title" href="#">{{ $animal['name'] }}</a>
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <a href="#">Покупка (10)</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Продажа (10)</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <a href="#">
-                                            <img class="img-responsive" src="{{ $animal['img'] }}" alt="demo"/>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-
-                    </div>
-
-                    <div class="tab-pane" id="bird">
-
-                        @foreach ($animals as $animal)
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <a class="title" href="#">{{ $animal['name'] }}</a>
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <a href="#">Покупка (2)</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Продажа (2)</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <a href="#">
-                                            <img class="img-responsive" src="{{ $animal['img'] }}" alt="demo"/>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-
-                    </div>
-
-                    <div class="tab-pane" id="fish">
-
-                        @foreach ($animals as $animal)
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <a class="title" href="#">{{ $animal['name'] }}</a>
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <a href="#">Покупка (12)</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Продажа (32)</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <a href="#">
-                                            <img class="img-responsive" src="{{ $animal['img'] }}" alt="demo"/>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-
-                    </div>
-                </div>
 
 
             </div>
@@ -372,36 +414,38 @@
     <section class="recommend-ads">
         <div class="container">
             <div class="row">
-                <h2>Рекомендуемые объявления</h2>
-                <div class="btn-wrapper">
-                    <div class="btn btn-blue pull-right">Добавить объявление</div>
-                </div>
-                <div class="clearfix"></div>
+                <div class="col-xs-12">
+                    <h2>Рекомендуемые объявления</h2>
+                    <div class="btn-wrapper">
+                        <div class="btn btn-blue pull-right">Добавить объявление</div>
+                    </div>
+                    <div class="clearfix"></div>
 
-                <div id="recommend-ads-slider" class="owl-carousel owl-theme">
-                    @for($i = 0; $i<20; $i++)
-                        <div class="item">
-                            <a href="#">
-                                <div class="img-wrapper">
-                                    <img class="img-responsive" src="/img/tmp/cow-sl.jpg" alt="demo">
-                                    <!--noindex-->
+                    <div id="recommend-ads-slider" class="owl-carousel owl-theme">
+                        @for($i = 0; $i<20; $i++)
+                            <div class="item">
+                                <a href="#">
+                                    <div class="img-wrapper">
+                                        <img class="img-responsive" src="/img/tmp/cow-sl.jpg" alt="demo">
+                                        <!--noindex-->
                                     <span class="hover-zoom">
                                         <span class="zoom"></span>
                                     </span>
-                                    <!--/noindex-->
-                                </div>
-                            </a>
-                            <a class="name" href="#">
-                                Продажа коров
-                            </a>
-                            <a class="price" href="#">
-                                50 000р
-                            </a>
-                            <a class="city" href="#">
-                                г.Москва
-                            </a>
-                        </div>
-                    @endfor
+                                        <!--/noindex-->
+                                    </div>
+                                </a>
+                                <a class="name" href="#">
+                                    Продажа коров
+                                </a>
+                                <a class="price" href="#">
+                                    50 000р
+                                </a>
+                                <a class="city" href="#">
+                                    г.Москва
+                                </a>
+                            </div>
+                        @endfor
+                    </div>
                 </div>
             </div>
         </div>
@@ -411,12 +455,12 @@
     <section class="private-ads">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9">
+                <div class="col-lg-9 col-xs-12">
                     <h2>Частные объявления</h2>
 
                     <!--Tab panes-->
                     <div class="nav-wrapper">
-                        <ul class="nav nav-tabs pull-right">
+                        <ul class="nav nav-tabs hidden-xs pull-right">
                             <li class="active">
                                 <a href="#private-sell" data-toggle="tab">Продам</a>
                             </li>
@@ -430,6 +474,28 @@
                                 <a href="#">Добавить</a>
                             </li>
                         </ul>
+                        <!--noindex-->
+                        <div class="dropdown visible-xs pull-right">
+                            <button class="btn dropdown-toggle" type="button" id="padsMobile" data-toggle="dropdown">
+                                Популярные
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="padsMobile">
+                                <li class="active">
+                                    <a href="#private-sell" data-toggle="tab">Продам</a>
+                                </li>
+                                <li>
+                                    <a href="#private-buy" data-toggle="tab">Куплю</a>
+                                </li>
+                                <li>
+                                    <a href="#private-all" data-toggle="tab">Все</a>
+                                </li>
+                                <li>
+                                    <a href="#">Добавить</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/noindex-->
                     </div>
 
                     <!--Nav tabs-->
@@ -468,9 +534,14 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="private-ads-banner">
-                        <a href="#">
+                        <a href="#" class="hidden-md hidden-sm hidden-xs">
                             <img class="img-responsive" src="/img/tmp/private-banner.jpg" alt="demo">
                         </a>
+                        <!--noindex-->
+                        <a href="#" class="hidden-lg col-xs-12">
+                            <img class="img-responsive" src="/img/tmp/bottom-banner.jpg" alt="demo">
+                        </a>
+                        <!--/noindex-->
                     </div>
                 </div>
             </div>
@@ -481,7 +552,7 @@
     <section class="pro-ads">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9">
+                <div class="col-lg-9 col-md-9 col-sm-8">
                     <div class="main-pro-ads">
                         <h2>Предложения профессионалов</h2>
 
@@ -493,13 +564,13 @@
 
                         <div class="row">
                             @for($i = 0; $i < 4; $i++)
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-md-6 col-md-offset-0 col-sm-12 col-xs-10 col-xs-offset-1">
                                     <div class="row">
                                         <div class="item">
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                                 <img class="img-responsive" src="/img/tmp/sunflower.jpg" alt="demo">
                                             </div>
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                                 <h4>ООО "Подсолнух"</h4>
                                                 <span class="geo">Московская область</span>
                                                 <span class="desc">
@@ -516,18 +587,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-3 col-sm-4">
                     <div class="additional-pro-ads">
-                        <h2>Новые профессионалы</h2>
+                        <h2>Новые ПРО</h2>
                         @for($i = 0; $i < 3; $i++)
                         <div class="row">
                             <div class="item">
-                                <div class="col-lg-5">
+                                <div class="col-lg-5 col-md-4 col-sm-12 col-xs-6">
                                     <a href="#">
                                         <img  class="img-responsive img-circle" src="/img/tmp/sunflower.jpg" alt="demo">
                                     </a>
                                 </div>
-                                <div class="col-lg-7">
+                                <div class="col-lg-7 col-md-8 col-sm-12 col-xs-6">
                                     <h4>ООО "Трактор"</h4>
                                     <span class="geo">г.Москва</span>
                                 </div>
@@ -546,19 +617,27 @@
     <section class="tenders">
         <div class="container">
             <div class="row tenders-nav">
-                <h2>Актуальные тендеры</h2>
+                <div class="col-xs-12">
+                    <h2>Актуальные тендеры</h2>
 
-                <div class="nav-wrapper">
-                    <div class="nav pull-right">
-                        <a href="#" class="active">Добавить тендер</a>
-                        <a href="#">Все текущие тендеры</a>
+                    <div class="nav-wrapper">
+                        <div class="nav pull-right">
+                            <a href="#" class="active">Добавить тендер</a>
+                            <a href="#">Все текущие тендеры</a>
+                        </div>
                     </div>
                 </div>
+
             </div>
             <div class="row tenders-items">
                 <div class="items">
                     @for($i = 0; $i < 8; $i++)
-                        <div class="col-lg-3">
+                        <? $class = '' ?>
+                        @if($i > 5)
+                            <? $class = 'hidden-md hidden-sm' ?>
+                        @endif
+
+                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6 <?= $class ?>">
                             <article class="item">
                                 <header>
                                     <div class="row">
@@ -592,7 +671,7 @@
     <div class="bottom-banner">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
+                <div class="col-lg-10 col-lg-offset-1 col-xs-10 col-xs-offset-1">
                     <img class="img-responsive" src="/img/tmp/bottom-banner.jpg" alt="demo">
                 </div>
             </div>
@@ -604,58 +683,63 @@
     <section class="blogs">
         <div class="container">
             <div class="row">
-                <h2>Блоги</h2>
+                <div class="col-xs-12">
+                    <h2>Блоги</h2>
 
-                <!--Tab panes-->
-                <div class="nav-wrapper">
-                    <ul class="nav nav-tabs pull-right">
-                        <li class="active">
-                            <a href="#blog-new" data-toggle="tab">Новое</a>
-                        </li>
-                        <li>
-                            <a href="#blog-popular" data-toggle="tab">Популярное</a>
-                        </li>
-                        <li>
-                            <a href="#blog-all" data-toggle="tab">Все</a>
-                        </li>
-                    </ul>
-                </div>
+                    <!--Tab panes-->
+                    <div class="nav-wrapper">
+                        <ul class="nav nav-tabs pull-right">
+                            <li class="active">
+                                <a href="#blog-new" data-toggle="tab">Новое</a>
+                            </li>
+                            <li>
+                                <a href="#blog-popular" data-toggle="tab">Популярное</a>
+                            </li>
+                            <li>
+                                <a href="#blog-all" data-toggle="tab">Все</a>
+                            </li>
+                        </ul>
+                    </div>
 
-                <!--Nav tabs-->
-                <div class="tab-content">
-                    <div class="tab-pane active" id="blog-new">
-                        @for($i = 0; $i < 4; $i++)
-                            <div class="col-lg-3">
-                                <article class="item">
-                                    <img class="img-responsive" src="/img/tmp/blog-image.jpg" alt="demo">
-                                    <header class="author">
-                                        <div class="row">
-                                            <div class="col-lg-5">
-                                                <div class="avatar">
-                                                    <img class="img-responsive img-circle" src="/img/tmp/blog-user.jpg" alt="demo">
+                    <!--Nav tabs-->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="blog-new">
+                            @for($i = 0; $i < 4; $i++)
+                                <? $class = '' ?>
+                                @if($i > 2)
+                                    <? $class = 'hidden-md hidden-sm' ?>
+                                @endif
+                                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 <?= $class ?>">
+                                    <article class="item">
+                                        <img class="img-responsive" src="/img/tmp/blog-image.jpg" alt="demo">
+                                        <header class="author">
+                                            <div class="row">
+                                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6">
+                                                    <div class="avatar">
+                                                        <img class="img-responsive img-circle" src="/img/tmp/blog-user.jpg" alt="demo">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6">
+                                                    <div class="name">
+                                                        Иван Иванов
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-7">
-                                                <div class="name">
-                                                    Иван Иванов
+                                        </header>
+                                        <main>
+                                            <h4>Современное животноводство</h4>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab at
+                                                consectetur deleniti dolor doloremque dolores enim ...
+                                            </p>
+                                        </main>
+                                        <footer>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6">
+                                                    <div class="date pull-left">10 апреля 2015</div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </header>
-                                    <main>
-                                        <h4>Современное животноводство</h4>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab at
-                                            consectetur deleniti dolor doloremque dolores enim ...
-                                        </p>
-                                    </main>
-                                    <footer>
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="date pull-left">10 апреля 2015</div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="socials pull-right">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6">
+                                                    <div class="socials pull-right">
                                                 <span class="comments">
                                                     <i class="comments-icon"></i>
                                                     10
@@ -664,14 +748,15 @@
                                                     <i class="like-icon"></i>
                                                     3
                                                 </span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </footer>
-                                </article>
-                            </div>
-                        @endfor
+                                            <div class="clearfix"></div>
+                                        </footer>
+                                    </article>
+                                </div>
+                            @endfor
+                        </div>
                     </div>
                 </div>
             </div>
@@ -683,22 +768,24 @@
         <section class="register-bottom">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5">
-                        <div class="title">
-                            <h3>Не нашли то, что у нас искали ?</h3>
-                            <span>Зарегистрируйтесь сейчас и получайте обновления.</span>
+                    <div class="col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1">
+                        <div class="col-lg-5 col-md-4">
+                            <div class="title">
+                                <h3>Не нашли то, что у нас искали ?</h3>
+                                <span>Зарегистрируйтесь сейчас и получайте обновления.</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <input type="text" class="form-control" placeholder="Email">
-                    </div>
-                    <div class="col-lg-2">
-                        <input type="text" class="form-control" placeholder="Пароль">
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="btn btn-blue center-block">
-                            <i class="icon-register"></i>
-                            Регистрация
+                        <div class="col-lg-2 col-md-3">
+                            <input type="text" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="col-lg-2 col-md-3">
+                            <input type="text" class="form-control" placeholder="Пароль">
+                        </div>
+                        <div class="col-lg-2 col-md-2">
+                            <div class="btn btn-blue center-block">
+                                <i class="icon-register"></i>
+                                Регистрация
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -721,7 +808,17 @@
 <script>
     $(document).ready(function () {
 
+        $(".dropdown-menu li a").on('click',function(){
+           $(this).parent().removeClass('active');
+           console.log($(this).parent().parent().parent().find('button').text($(this).text()).append('<span class="caret"></span>'));
+        });
+
         $(".additional").on('click', function () {
+            $(".additional-search").stop().slideToggle();
+            $(".overlay").stop().fadeToggle();
+        });
+
+        $(".search-header").on('click', function () {
             $(".additional-search").stop().slideToggle();
             $(".overlay").stop().fadeToggle();
         });

@@ -5656,8 +5656,8 @@ button.close {
   font-weight: 700;
   font-style: normal;
   font-stretch: normal; }
-.ui-sprite, .ui-checkbox, .ui-checkbox_check, .ui-comment, .ui-fav, .ui-help, .ui-info-blue, .ui-info-orange, .ui-key, .ui-left, .ui-left_h, .ui-like, .ui-reg, .ui-right, .ui-right_h, .ui-search, .ui-zoom_photo, input[type="checkbox"]:before, input[type="checkbox"]:checked:before, header .top .user-bar nav ul li a.enter:before, header .top .user-bar nav ul li a.register:before, header .top .user-bar nav ul li a.help:before, .search ul li button .icon-search:before, main.base .recommend-ads h2:before, main.base .recommend-ads .item .img-wrapper .hover-zoom .zoom, main.base .recommend-ads .owl-theme .owl-nav .owl-prev, main.base .recommend-ads .owl-theme .owl-nav .owl-prev:hover, main.base .recommend-ads .owl-theme .owl-nav .owl-next, main.base .recommend-ads .owl-theme .owl-nav .owl-next:hover, main.base .private-ads .tab-content table td a.info, main.base .tenders .items .item main .info, main.base .blogs .tab-content .item footer .socials .comments-icon, main.base .blogs .tab-content .item footer .socials .like-icon, main.base .register-bottom .row .btn .icon-register {
-  background-image: url('/img/sprites/ui-sf2dc9bdc37.png');
+.ui-sprite, .ui-checkbox, .ui-checkbox_check, .ui-comment, .ui-fav, .ui-help, .ui-info-blue, .ui-info-orange, .ui-key, .ui-left, .ui-left_h, .ui-like, .ui-reg, .ui-right, .ui-right_h, .ui-search, .ui-search_b, .ui-zoom_photo, input[type="checkbox"]:before, input[type="checkbox"]:checked:before, header .search-header .icon-search, header .top .user-bar nav ul li a i.enter:before, header .top .user-bar nav ul li a i.register:before, header .top .user-bar nav ul li a i.help:before, .search ul li button .icon-search:before, main.base .recommend-ads h2:before, main.base .recommend-ads .item .img-wrapper .hover-zoom .zoom, main.base .recommend-ads .owl-theme .owl-nav .owl-prev, main.base .recommend-ads .owl-theme .owl-nav .owl-prev:hover, main.base .recommend-ads .owl-theme .owl-nav .owl-next, main.base .recommend-ads .owl-theme .owl-nav .owl-next:hover, main.base .private-ads .tab-content table td a.info, main.base .tenders .items .item main .info, main.base .blogs .tab-content .item footer .socials .comments-icon, main.base .blogs .tab-content .item footer .socials .like-icon, main.base .register-bottom .row .btn .icon-register {
+  background-image: url('/img/sprites/ui-s28bb433651.png');
   background-repeat: no-repeat; }
 
 .ui-checkbox {
@@ -5705,8 +5705,11 @@ button.close {
 .ui-search {
   background-position: 0 -354px; }
 
-.ui-zoom_photo {
+.ui-search_b {
   background-position: 0 -382px; }
+
+.ui-zoom_photo {
+  background-position: 0 -410px; }
 
 .socials-sprite, .socials-fb, .socials-gp, .socials-ok, .socials-vk, header .bottom nav.navbar-default ul.nav.socials li.fb:before, header .bottom nav.navbar-default ul.nav.socials li.fb:hover:before, header .bottom nav.navbar-default ul.nav.socials li.gp:before, header .bottom nav.navbar-default ul.nav.socials li.gp:hover:before, header .bottom nav.navbar-default ul.nav.socials li.vk:before, header .bottom nav.navbar-default ul.nav.socials li.vk:hover:before, header .bottom nav.navbar-default ul.nav.socials li.ok:before, header .bottom nav.navbar-default ul.nav.socials li.ok:hover:before, footer.base .socials li.fb:before, footer.base .socials li.fb:hover:before, footer.base .socials li.gp:before, footer.base .socials li.gp:hover:before, footer.base .socials li.vk:before, footer.base .socials li.vk:hover:before, footer.base .socials li.ok:before, footer.base .socials li.ok:hover:before {
   background-image: url('/img/sprites/socials-sc54d8e8650.png');
@@ -5807,6 +5810,22 @@ input[type="checkbox"]:checked:before {
 
 header {
   background: #ffffff; }
+  header .search-header {
+    background: none;
+    border: none;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-left: 1px solid #e7e7e7;
+    cursor: pointer; }
+    header .search-header:focus {
+      border: none !important;
+      border-left: 1px solid #e7e7e7; }
+    header .search-header .icon-search {
+      display: block;
+      width: 25px;
+      height: 25px;
+      background-position: 0 -382px; }
   header .top {
     background: #72d1eb; }
     header .top .region span {
@@ -5846,18 +5865,18 @@ header {
         header .top .user-bar nav ul li a:hover, header .top .user-bar nav ul li a:focus {
           background: none;
           color: #ffffff; }
-        header .top .user-bar nav ul li a:before {
+        header .top .user-bar nav ul li a i:before {
           position: absolute;
           content: '';
           width: 25px;
           height: 25px;
           top: 5px;
           left: -13px; }
-        header .top .user-bar nav ul li a.enter:before {
+        header .top .user-bar nav ul li a i.enter:before {
           background-position: 0 -183px; }
-        header .top .user-bar nav ul li a.register:before {
+        header .top .user-bar nav ul li a i.register:before {
           background-position: 0 -281px; }
-        header .top .user-bar nav ul li a.help:before {
+        header .top .user-bar nav ul li a i.help:before {
           background-position: 0 -108px; }
   header .middle {
     padding: 20px 0; }
@@ -5878,12 +5897,14 @@ header {
       background: url("/img/bg/sky.jpg") center no-repeat;
       background-size: cover;
       color: #393939; }
-      header .middle .reformal p {
+      header .middle .reformal a {
         padding: 12px 7px 12px 30px;
         margin: 0;
         line-height: 20px;
-        font-size: 15px; }
-      header .middle .reformal a {
+        font-size: 1.071em;
+        display: block;
+        color: #202020; }
+      header .middle .reformal a.btn {
         -webkit-transition-property: background;
         transition-property: background;
         -webkit-transition-duration: 0.2s;
@@ -5896,7 +5917,7 @@ header {
         display: block;
         margin: 12px 20px 12px 0px;
         text-align: center; }
-        header .middle .reformal a:hover {
+        header .middle .reformal a.btn:hover {
           text-decoration: none;
           background: #89DB51; }
   header .bottom nav.navbar {
@@ -5981,7 +6002,7 @@ header {
       header .bottom nav.navbar-default ul.nav li:first-child:before {
         border-left: none; }
       header .bottom nav.navbar-default ul.nav li a {
-        font-size: 15px;
+        font-size: 1.071em;
         text-transform: uppercase;
         padding: 12px 25px 9px;
         line-height: 24px; }
@@ -5994,24 +6015,24 @@ header {
     top: 10%; }
     #main-slider .promo h2 {
       margin-top: 30px;
-      font-size: 31px;
+      font-size: 2.214em;
       font-weight: 400; }
     #main-slider .promo h2,
     #main-slider .promo p.big {
       color: #fff;
       margin-top: 40px;
       margin-bottom: 50px;
-      font-size: 38px; }
+      font-size: 2.714em; }
     #main-slider .promo p {
       color: #fff;
-      font-size: 29px;
+      font-size: 2.071em;
       margin: 36px 0;
       line-height: 32px;
       font-weight: 400; }
     #main-slider .promo .button {
       *display: inline;
       display: inline-block;
-      font-size: 25px;
+      font-size: 1.786em;
       padding: 4px 10px;
       margin-right: 28px; }
 
@@ -6033,10 +6054,10 @@ header {
       list-style: none;
       padding: 15px 10px; }
       .search ul li:first-child {
-        font-size: 18px; }
+        font-size: 1.286em; }
       .search ul li select {
         cursor: pointer;
-        font-size: 16px;
+        font-size: 1.143em;
         height: 40px !important; }
       .search ul li.additional {
         text-align: left;
@@ -6171,7 +6192,7 @@ main.base {
         -webkit-border-radius: 0;
         border-radius: 0;
         color: #fff;
-        font-weight: 500; }
+        font-weight: 400; }
         main.base .categories .nav-wrapper .nav-tabs li.active a:hover {
           /*border:none;*/ }
         main.base .categories .nav-wrapper .nav-tabs li.active a:focus {
@@ -6179,6 +6200,25 @@ main.base {
           border: 1px solid $orange;*/ }
     main.base .categories .nav-wrapper .nav {
       margin-top: -41px; }
+    main.base .categories .nav-wrapper .dropdown button {
+      border: none;
+      background: #ffa955;
+      -moz-border-radius: 0;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      color: #fff;
+      font-weight: 400;
+      font-size: 130%; }
+    main.base .categories .nav-wrapper .dropdown-menu {
+      -moz-border-radius: 0;
+      -webkit-border-radius: 0;
+      border-radius: 0; }
+      main.base .categories .nav-wrapper .dropdown-menu .active a {
+        text-decoration: none;
+        color: #262626;
+        background-color: #fff; }
+        main.base .categories .nav-wrapper .dropdown-menu .active a:hover {
+          background-color: #f5f5f5; }
   main.base .categories .tab-content {
     margin-top: 20px; }
     main.base .categories .tab-content .tab-pane {
@@ -6193,7 +6233,7 @@ main.base {
         main.base .categories .tab-content .tab-pane .item li {
           margin: 5px 0; }
         main.base .categories .tab-content .tab-pane .item a {
-          color: #000000; }
+          color: #202020; }
           main.base .categories .tab-content .tab-pane .item a.title {
             font-size: 1.714em;
             font-weight: 500; }
@@ -6239,7 +6279,7 @@ main.base {
             width: 45px;
             height: 45px;
             margin: auto;
-            background-position: 0 -382px; }
+            background-position: 0 -410px; }
         main.base .recommend-ads .item .img-wrapper:hover .hover-zoom {
           display: block; }
       main.base .recommend-ads .item a {
@@ -6250,7 +6290,7 @@ main.base {
           padding-left: 15px; }
         main.base .recommend-ads .item a.name {
           margin-top: 6px;
-          font-size: 16px; }
+          font-size: 1.143em; }
     main.base .recommend-ads .owl-theme .owl-nav .owl-prev,
     main.base .recommend-ads .owl-theme .owl-nav .owl-next {
       border: none;
@@ -6264,7 +6304,7 @@ main.base {
       background-color: transparent;
       position: absolute;
       top: 30%;
-      left: -30px; }
+      left: -10px; }
       main.base .recommend-ads .owl-theme .owl-nav .owl-prev:hover {
         background-position: 0 -232px;
         background-color: transparent; }
@@ -6275,7 +6315,7 @@ main.base {
       background-color: transparent;
       position: absolute;
       top: 30%;
-      right: -40px; }
+      right: -20px; }
       main.base .recommend-ads .owl-theme .owl-nav .owl-next:hover {
         background-position: 0 -330px;
         background-color: transparent; }
@@ -6327,6 +6367,25 @@ main.base {
             border: 1px solid $orange;*/ }
       main.base .private-ads .nav-wrapper .nav {
         margin-top: -41px; }
+      main.base .private-ads .nav-wrapper .dropdown button {
+        border: none;
+        background: #97ca75;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        color: #fff;
+        font-weight: 400;
+        font-size: 130%; }
+      main.base .private-ads .nav-wrapper .dropdown-menu {
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0; }
+        main.base .private-ads .nav-wrapper .dropdown-menu .active a {
+          text-decoration: none;
+          color: #262626;
+          background-color: #fff; }
+          main.base .private-ads .nav-wrapper .dropdown-menu .active a:hover {
+            background-color: #f5f5f5; }
     main.base .private-ads .tab-content table {
       width: 100%;
       margin-top: 25px; }
@@ -6377,11 +6436,11 @@ main.base {
       main.base .pro-ads .additional-pro-ads .item {
         margin: 18px 0; }
       main.base .pro-ads .additional-pro-ads h2 {
-        font-size: 24px;
-        margin-top: 11px;
+        font-size: 2.143em;
+        margin-top: 30px;
         border-bottom: 2px solid #ffa955; }
       main.base .pro-ads .additional-pro-ads h4 {
-        font-size: 14px;
+        font-size: 1em;
         margin-top: 20px; }
   main.base .tenders {
     background: url("/img/tenders-bg.jpg") no-repeat center;
@@ -6395,7 +6454,7 @@ main.base {
       border-bottom: 2px solid #97ca75; }
       main.base .tenders .nav-wrapper a {
         font-size: 1.071em;
-        color: #000000;
+        color: #202020;
         font-weight: 500;
         -moz-border-radius: 0;
         -webkit-border-radius: 0;
@@ -6444,7 +6503,7 @@ main.base {
     border-bottom: 2px solid #ffa955; }
     main.base .blogs .nav-wrapper .nav-tabs {
       border-bottom: none; }
-      main.base .blogs .nav-wrapper .nav-tabs li a {
+      main.base .blogs .nav-wrapper .nav-tabs li a.text {
         font-size: 1.071em;
         color: #000;
         font-weight: 500;
@@ -6458,13 +6517,13 @@ main.base {
         -moz-border-radius: 0;
         -webkit-border-radius: 0;
         border-radius: 0; }
-        main.base .blogs .nav-wrapper .nav-tabs li a:hover {
+        main.base .blogs .nav-wrapper .nav-tabs li a.text:hover {
           /*border: none;*/
           background: #ffa955;
           /*border: 1px solid $orange;*/
           color: #fff;
           /*outline: 1px solid $orange;*/ }
-        main.base .blogs .nav-wrapper .nav-tabs li a:focus {
+        main.base .blogs .nav-wrapper .nav-tabs li a.text:focus {
           /*outline: 1px solid $orange;
           border: 1px solid $orange;*/ }
       main.base .blogs .nav-wrapper .nav-tabs li.active a {
@@ -6480,8 +6539,18 @@ main.base {
         main.base .blogs .nav-wrapper .nav-tabs li.active a:focus {
           /*outline: 1px solid $orange;
           border: 1px solid $orange;*/ }
+      main.base .blogs .nav-wrapper .nav-tabs li a {
+        color: #202020;
+        border: none; }
+        main.base .blogs .nav-wrapper .nav-tabs li a:hover {
+          border: none;
+          background: #ffa955;
+          -moz-border-radius: 0;
+          -webkit-border-radius: 0;
+          border-radius: 0;
+          color: #fff; }
     main.base .blogs .nav-wrapper .nav {
-      margin-top: -41px; }
+      margin-top: -39px; }
   main.base .blogs .tab-content {
     margin-top: 25px; }
     main.base .blogs .tab-content .item {
@@ -6530,10 +6599,10 @@ main.base {
         padding-left: 20px;
         margin-left: 30px; }
         main.base .register-bottom .row .title h3 {
-          font-size: 16px;
+          font-size: 1.143em;
           font-weight: 400; }
         main.base .register-bottom .row .title span {
-          font-size: 16px;
+          font-size: 1.143em;
           font-weight: 400; }
       main.base .register-bottom .row input {
         margin: 20px 0; }
@@ -6624,7 +6693,7 @@ footer.base {
   footer.base h4 {
     color: #fff;
     text-transform: uppercase;
-    font-size: 14px; }
+    font-size: 1em; }
   footer.base .bottom {
     background: #818181;
     color: #fff; }
@@ -6643,3 +6712,249 @@ footer.base {
         border-left: none; }
       footer.base .bottom ul li a {
         color: #fff; }
+
+@media (max-width: 1199px) {
+  header .middle .reformal a {
+    padding: 12px 8px;
+    text-align: center;
+    color: #6B944F;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    /*text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);*/ }
+    header .middle .reformal a:hover {
+      color: #FF7E00;
+      text-decoration: none; }
+
+  #main-slider .promo p {
+    font-size: 1.714em;
+    margin: 5px 0; }
+
+  #main-slider .promo h2, #main-slider .promo p.big {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 1.714em; }
+
+  .search ul li {
+    padding: 15px 5px; }
+
+  main.base .categories .nav-wrapper {
+    float: right;
+    font-size: 90%;
+    width: 80%;
+    border-bottom: none; }
+    main.base .categories .nav-wrapper .nav-tabs li a {
+      padding: 10px 10px; }
+    main.base .categories .nav-wrapper .nav {
+      margin-top: -47px;
+      border-bottom: 2px solid #ffa955; }
+
+  main.base .private-ads .tab-content table td a.info {
+    float: right; }
+
+  main.base .private-ads .private-ads-banner {
+    padding: 35px 0; }
+
+  main.base .pro-ads .main-pro-ads .item img {
+    margin-top: 13px; }
+
+  main.base .pro-ads .additional-pro-ads h4 {
+    margin-top: 0; }
+
+  main.base .pro-ads .additional-pro-ads .item {
+    margin: 35px 0; }
+
+  main.base .register-bottom .row .title {
+    padding-left: 15px;
+    margin-left: 10px;
+    font-size: 90%; }
+
+  .footer-category ul {
+    padding: 0;
+    display: table;
+    table-layout: auto;
+    float: none;
+    width: 100%;
+    margin: auto; }
+    .footer-category ul li {
+      display: table-cell;
+      float: none;
+      text-align: center;
+      list-style: none; }
+
+  footer.base h4 {
+    font-size: 90%; }
+
+  main.base .recommend-ads .owl-theme .owl-nav .owl-next {
+    right: -17px; }
+
+  main.base .recommend-ads .owl-theme .owl-nav .owl-prev {
+    left: -9px; } }
+@media (max-width: 991px) {
+  header .bottom nav.navbar-default ul.nav li a {
+    font-size: 90%;
+    padding: 12px 12px 9px; }
+
+  header .bottom nav.navbar-default ul.socials li a {
+    padding: 12px 19px 9px; }
+
+  #main-slider .promo {
+    font-size: 80%; }
+
+  #main-slider .promo h2, #main-slider .promo p.big {
+    margin-top: 9px;
+    margin-bottom: 11px; }
+
+  .search {
+    font-size: 80%; }
+
+  .search ul li.additional {
+    font-size: 120%; }
+
+  .search ul li select {
+    padding: 6px 5px; }
+
+  main.base .categories .nav-wrapper {
+    border-bottom: 2px solid #ffa955;
+    width: 100%;
+    margin-top: -38px; }
+
+  .btn .caret, .btn-group > .btn:first-child {
+    margin-left: 5px; }
+
+  main.base .pro-ads h2 {
+    font-size: 130%; }
+  main.base .pro-ads .additional-pro-ads h2 {
+    margin-top: 20px;
+    font-size: 130%;
+    padding-bottom: 10px; }
+
+  main.base .pro-ads .additional-pro-ads .item {
+    text-align: center;
+    margin: 25px 0; }
+    main.base .pro-ads .additional-pro-ads .item img {
+      margin: auto; }
+    main.base .pro-ads .additional-pro-ads .item h4 {
+      margin-top: 15px; }
+
+  main.base .blogs .tab-content .item footer {
+    text-align: center; }
+    main.base .blogs .tab-content .item footer .date {
+      float: none !important; }
+    main.base .blogs .tab-content .item footer .socials {
+      float: none !important; }
+
+  main.base .register-bottom .row .title {
+    border-left: none;
+    text-align: center;
+    font-size: 100%; } }
+@media (max-width: 767px) {
+  header .top .region span#region {
+    margin-bottom: 10px; }
+
+  .main-nav-button {
+    float: left; }
+
+  header .bottom nav.navbar-default ul.nav.socials {
+    margin: 0; }
+
+  header .bottom nav.navbar-default ul.nav.socials li {
+    float: left; }
+
+  header .bottom nav.navbar-default ul.socials li a {
+    padding: 12px 19px 14px; }
+
+  #main-slider .promo h2, #main-slider .promo h2 {
+    font-size: 130%; }
+
+  #main-slider .promo h2, #main-slider .promo p {
+    font-size: 130%; }
+
+  main.base .categories .nav-wrapper {
+    width: 70%; }
+
+  main.base .categories .nav-wrapper {
+    border-bottom: 2px solid #ffa955;
+    width: 100%;
+    margin-top: -30px; }
+
+  main.base .categories h2 {
+    font-size: 130%; }
+
+  .btn .caret, .btn-group > .btn:first-child {
+    margin-left: 5px; }
+
+  .owl-theme .owl-nav {
+    display: none !important; }
+
+  main.base .recommend-ads h2 {
+    font-size: 130%; }
+
+  main.base .recommend-ads h2:before {
+    display: none; }
+
+  main.base .private-ads h2 {
+    font-size: 130%; }
+
+  main.base .private-ads .dropdown {
+    margin-top: -35px; }
+
+  main.base .private-ads .tab-content table {
+    border: none; }
+
+  main.base .private-ads .tab-content table td {
+    padding: 10px 15px; }
+
+  main.base .pro-ads .additional-pro-ads .item h4 {
+    margin-top: 55px; }
+
+  main.base .pro-ads .additional-pro-ads .item {
+    font-size: 120%; }
+
+  main.base .tenders .row.tenders-nav h2 {
+    font-size: 130%; }
+
+  main.base .tenders .nav-wrapper a {
+    padding: 6px; }
+
+  main.base .tenders .nav-wrapper .nav {
+    margin-top: -28px; }
+
+  main.base .blogs .tab-content .item img {
+    width: 100%;
+    max-height: 250px; }
+
+  main.base .blogs .tab-content .item .author img {
+    width: 150px;
+    height: 150px; }
+
+  main.base .blogs .tab-content .item .author {
+    margin-top: -78px; }
+
+  main.base .blogs .tab-content .item .author .name {
+    margin-top: 96px;
+    font-size: 130%; }
+
+  footer.base .bottom .row .bottom-nav, footer.base .bottom .row .copyright {
+    text-align: center; }
+
+  .additional-search select,
+  .additional-search input {
+    margin: 15px 0; }
+
+  .additional-search .additional-search-wrapper .additional-search-price {
+    padding: 0; }
+    .additional-search .additional-search-wrapper .additional-search-price:after {
+      display: none; }
+
+  .additional-search .additional-search-wrapper .additional-search-price-bottom {
+    padding: 0; }
+
+  .additional-search .additional-search-wrapper .row {
+    margin: 0; }
+
+  .additional-search .additional-search-wrapper .additional-search-selector {
+    padding-bottom: 20px; } }

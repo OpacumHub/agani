@@ -2,7 +2,7 @@
     <div class="container">
 
         <div class="row top">
-            <div class="info col-lg-2">
+            <div class="info col-lg-2 col-md-3 col-sm-4 col-xs-4">
                 <img class="img-responsive" src="/img/logo-bottom.png" alt="Agani">
                 <span>Доска объявлений о покупке и продаже сельскохозяйственных животных и <br/> продуктов</span>
                 <ul class="socials">
@@ -22,7 +22,7 @@
                 <div class="clearfix"></div>
             </div>
 
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-2 col-sm-3 col-sm-3 col-xs-3">
                 <h4>Мой аккаунт</h4>
                 <ul>
                     <li>
@@ -43,7 +43,7 @@
                 </ul>
             </div>
 
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
                 <h4>О проекте</h4>
                 <ul>
                     <li>
@@ -64,7 +64,7 @@
                 </ul>
             </div>
 
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
                 <h4>Для профессионалов</h4>
                 <ul>
                     <li>
@@ -82,7 +82,7 @@
                 </ul>
             </div>
 
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
                 <h4>Для частных лиц</h4>
                 <ul>
                     <li>
@@ -100,7 +100,7 @@
                 </ul>
             </div>
 
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-lg-offset-0 col-md-8 col-md-offset-3 col-sm-12 col-xs-12 footer-category">
                 <h4>Категории</h4>
                 <ul>
                     <li>
@@ -122,10 +122,10 @@
     <div class="bottom">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 pull-left copyright">
-                    (C) 2015 copyright
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 pull-left copyright">
+                    &#x000A9; 2015 copyright
                 </div>
-                <div class="col-lg-5 col-lg-offset-4 pull-right bottom-nav">
+                <div class="col-lg-5 col-md-6 col-lg-offset-4 col-md-offset-3  col-sm-8 col-xs-12 pull-right bottom-nav">
                     <ul>
                         <li>
                             <a href="#">Главная</a>
