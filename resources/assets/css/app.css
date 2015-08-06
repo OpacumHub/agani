@@ -6235,8 +6235,9 @@ main.base {
         main.base .categories .tab-content .tab-pane .item a {
           color: #202020; }
           main.base .categories .tab-content .tab-pane .item a.title {
-            font-size: 1.714em;
-            font-weight: 500; }
+            font-size: 1.286em;
+            font-weight: 500;
+            word-wrap: break-word; }
             main.base .categories .tab-content .tab-pane .item a.title:hover {
               text-decoration: none; }
   main.base .recommend-ads {
@@ -6712,6 +6713,47 @@ footer.base {
         border-left: none; }
       footer.base .bottom ul li a {
         color: #fff; }
+
+main.base.catalog .categories .nav-wrapper p {
+  font-size: 1.071em;
+  font-weight: 400;
+  border: none;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background: #ffa955;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: #fff;
+  padding: 10px 15px;
+  margin: 0;
+  float: left; }
+main.base.catalog .categories .tab-content {
+  text-align: center; }
+  main.base.catalog .categories .tab-content .item {
+    width: 24%;
+    margin: 0;
+    display: inline-block; }
+    main.base.catalog .categories .tab-content .item img {
+      width: 127px;
+      height: 129px; }
+    main.base.catalog .categories .tab-content .item li {
+      margin: 5px 0; }
+    main.base.catalog .categories .tab-content .item a {
+      color: #202020; }
+      main.base.catalog .categories .tab-content .item a.title {
+        font-size: 1.286em;
+        font-weight: 500;
+        word-wrap: break-word; }
+        main.base.catalog .categories .tab-content .item a.title:hover {
+          text-decoration: none; }
 
 @media (max-width: 1199px) {
   header .middle .reformal a {

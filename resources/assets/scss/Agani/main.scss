@@ -251,8 +251,9 @@ main.base {
           a {
             color: #202020;
             &.title {
-              font-size: 1.714em;
+              font-size: 1.286em;
               font-weight: 500;
+              word-wrap: break-word;
               &:hover {
                 text-decoration: none;
               }

@@ -23,7 +23,17 @@ class MakeUpController extends Controller {
      */
     public function index()
     {
-        return view('app');
+        return view('pages.index');
 	}
+
+    /**
+     * Show catalog page
+     *
+     * @return mixed
+     */
+    public function catalog()
+    {
+        return view('pages.catalog');
+    }
 
 }

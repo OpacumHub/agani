@@ -1,0 +1,45 @@
+main.base.catalog {
+  .categories {
+    .nav-wrapper {
+      p {
+        font-size: 1.071em;
+        font-weight: 400;
+        border: none;
+        @include transation(all, 0.2s, ease-out);
+        @include border-radius(0);
+        background: $orange;
+        @include border-radius(0);
+        color: #fff;
+        padding: 10px 15px;
+        margin: 0;
+        float: left;
+      }
+    }
+    .tab-content {
+      text-align: center;
+      .item {
+        width: 24%;
+        margin: 0;
+        display: inline-block;
+        img {
+          width: 127px;
+          height: 129px;
+        }
+        li {
+          margin: 5px 0;
+        }
+        a {
+          color: #202020;
+          &.title {
+            font-size: 1.286em;
+            font-weight: 500;
+            word-wrap: break-word;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
