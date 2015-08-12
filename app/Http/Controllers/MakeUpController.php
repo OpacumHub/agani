@@ -36,4 +36,5 @@ class MakeUpController extends Controller {
         return view('pages.catalog');
     }
 
+
 }
